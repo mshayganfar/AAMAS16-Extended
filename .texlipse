@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Thu Feb 25 20:16:02 EST 2016
+markTmpDer=true
+builderNum=2
+outputDir=MahniShayganfar-AAMAS16-Extended
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=MahniShayganfar-AAMAS16-Extended.tex
+outputFile=MahniShayganfar-AAMAS16-Extended.pdf
+langSpell=en
+markDer=true
+srcDir=
