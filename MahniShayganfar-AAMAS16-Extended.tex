@@ -101,7 +101,7 @@ Mahni Shayganfar, Charles Rich, Candace L. Sidner\\
        \affaddr{Worcester Polytechnic Institute}\\
        \affaddr{100 Institute Road}\\
        \affaddr{Worcester, Massachusetts}\\
-       \email{\{mshayganfar|rich|sidner\}@wpi.edu}
+       \email{mshayganfar, rich, sidner@wpi.edu}
 }
 
 \maketitle
@@ -113,39 +113,40 @@ or virtual agents. We build primarily on the \textit{cognitive appraisal} theory
 emotions and the \textit{SharedPlans} theory of collaboration to investigate the
 structure, fundamental processes and functions of emotions in a collaboration.
 We have developed new algorithms for appraisal processes as part of a new
-overall computational model. We have evaluated our implemented algorithms by
-conducting an online user study.
+overall computational model. In this paper, we provide the \textit{expectedness}
+appraisal algorithm in collaboration context. We have evaluated our implemented
+algorithm by conducting an online user study.
 \end{abstract}
 
-\begin{CCSXML}
-<ccs2012>
- <concept>
-  <concept_id>10010520.10010553.10010562</concept_id>
-  <concept_desc>Computer systems organization~Embedded systems</concept_desc>
-  <concept_significance>500</concept_significance>
- </concept>
- <concept>
-  <concept_id>10010520.10010575.10010755</concept_id>
-  <concept_desc>Computer systems organization~Redundancy</concept_desc>
-  <concept_significance>300</concept_significance>
- </concept>
- <concept>
-  <concept_id>10010520.10010553.10010554</concept_id>
-  <concept_desc>Computer systems organization~Robotics</concept_desc>
-  <concept_significance>100</concept_significance>
- </concept>
- <concept>
-  <concept_id>10003033.10003083.10003095</concept_id>
-  <concept_desc>Networks~Network reliability</concept_desc>
-  <concept_significance>100</concept_significance>
- </concept>
-</ccs2012>
-\end{CCSXML}
-
-\ccsdesc[500]{Computer systems organization~Embedded systems}
-\ccsdesc[300]{Computer systems organization~Redundancy}
-\ccsdesc{Computer systems organization~Robotics}
-\ccsdesc[100]{Networks~Network reliability}
+% \begin{CCSXML}
+% <ccs2012>
+%  <concept>
+%   <concept_id>10010520.10010553.10010562</concept_id>
+%   <concept_desc>Computer systems organization~Embedded systems</concept_desc>
+%   <concept_significance>500</concept_significance>
+%  </concept>
+%  <concept>
+%   <concept_id>10010520.10010575.10010755</concept_id>
+%   <concept_desc>Computer systems organization~Redundancy</concept_desc>
+%   <concept_significance>300</concept_significance>
+%  </concept>
+%  <concept>
+%   <concept_id>10010520.10010553.10010554</concept_id>
+%   <concept_desc>Computer systems organization~Robotics</concept_desc>
+%   <concept_significance>100</concept_significance>
+%  </concept>
+%  <concept>
+%   <concept_id>10003033.10003083.10003095</concept_id>
+%   <concept_desc>Networks~Network reliability</concept_desc>
+%   <concept_significance>100</concept_significance>
+%  </concept>
+% </ccs2012>
+% \end{CCSXML}
+% 
+% \ccsdesc[500]{Computer systems organization~Embedded systems}
+% \ccsdesc[300]{Computer systems organization~Redundancy}
+% \ccsdesc{Computer systems organization~Robotics}
+% \ccsdesc[100]{Networks~Network reliability}
 
 \printccsdesc
 
@@ -159,18 +160,16 @@ conducting an online user study.
 
 %Keywords are your own choice of terms you would like the paper to be indexed by.
 
-\keywords{Algorithms, Appraisal; Human-Robot Collaboration}
+\keywords{Algorithms; Appraisal; Human-Robot Collaboration}
 
 \section{Introduction}
 
-The idea of robots or other intelligent agents living in a human environment has
-been a persistent dream from science fiction books to artificial intelligence
-and robotic laboratories. Collaborative robots are expected to become an
-integral part of humans' environment to accomplish their industrial and
-household tasks. In these environments, humans will be involved in robots'
-operations and decision-making processes. The involvement of humans influences
-the efficiency of robots' interaction and performance, and makes the robots
-sensitive to humans' cognitive abilities and behaviors.
+Collaborative robots are expected to become an integral part of humans'
+environment to accomplish their industrial and household tasks. In these
+environments, humans will be involved in robots' operations and decision-making
+processes. The involvement of humans influences the efficiency of robots'
+interaction and performance, and makes the robots sensitive to humans' cognitive
+abilities and behaviors.
 
 This work is implemented as part of a larger effort to build robots capable of
 generating and recognizing emotions in order to be better collaborators. In this

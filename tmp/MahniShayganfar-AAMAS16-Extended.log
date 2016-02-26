@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.24)  25 FEB 2016 23:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.21)  26 FEB 2016 15:44
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -811,15 +811,14 @@ File: omsaer.fd 1999/12/27
 LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 107.
 
-Excluding 'CCSXML' comment.
 <figure/taskModel-croped.pdf, id=4, 556.0775pt x 221.82875pt>
 File: figure/taskModel-croped.pdf Graphic file (type pdf)
 
 <use figure/taskModel-croped.pdf>
-Package pdftex.def Info: figure/taskModel-croped.pdf used on input line 204.
+Package pdftex.def Info: figure/taskModel-croped.pdf used on input line 203.
 (pdftex.def)             Requested size: 412.56851pt x 148.66508pt.
 
-Overfull \hbox (2.03662pt too wide) in paragraph at lines 244--244
+Overfull \hbox (2.03662pt too wide) in paragraph at lines 243--243
 []\secfnt EXPECTEDNESS IN COL-LAB-O-RAITON 
  []
 
@@ -830,7 +829,7 @@ Overfull \hbox (2.03662pt too wide) in paragraph at lines 244--244
 ! Undefined control sequence.
 <argument> ...(\mathit {g}_{t})}\hspace *{2mm}\OR 
                                                   $ \\ \hspace *{13mm}$\text...
-l.271 ...eccessaryFocusShift}{(\mathit{g}_{t})})$}
+l.270 ...eccessaryFocusShift}{(\mathit{g}_{t})})$}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -843,10 +842,10 @@ and I'll forget about whatever was undefined.
 
 ] (./MahniShayganfar-AAMAS16-Extended.aux) ) 
 Here is how much of TeX's memory you used:
- 18248 strings out of 493304
- 354310 string characters out of 6139870
- 740190 words of memory out of 5000000
- 21294 multiletter control sequences out of 15000+600000
+ 18244 strings out of 493304
+ 354243 string characters out of 6139871
+ 739190 words of memory out of 5000000
+ 21290 multiletter control sequences out of 15000+600000
  67272 words of font info for 91 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  56i,11n,59p,10437b,302s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -865,7 +864,7 @@ ic/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helveti
 c/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on MahniShayganfar-AAMAS16-Extended.pdf (3 pages, 223475 bytes).
+Output written on MahniShayganfar-AAMAS16-Extended.pdf (3 pages, 221066 bytes).
 
 PDF statistics:
  101 PDF objects out of 1000 (max. 8388607)
