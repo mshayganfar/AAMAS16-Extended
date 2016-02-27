@@ -114,7 +114,7 @@ emotions and the \textit{SharedPlans} theory of collaboration to investigate the
 structure, fundamental processes and functions of emotions in a collaboration.
 We have developed new algorithms for appraisal processes as part of a new
 overall computational model. In this paper, we provide the \textit{expectedness}
-appraisal algorithm in collaboration context. We have evaluated our implemented
+appraisal algorithm for collaboration context. We have evaluated our implemented
 algorithm by conducting an online user study.
 \end{abstract}
 
@@ -167,19 +167,18 @@ algorithm by conducting an online user study.
 Collaborative robots are expected to become an integral part of humans'
 environment to accomplish their industrial and household tasks. In these
 environments, humans will be involved in robots' operations and decision-making
-processes. The involvement of humans influences the efficiency of robots'
-interaction and performance, and makes the robots sensitive to humans' cognitive
-abilities and behaviors.
+processes. The involvement of humans requires the robots to evaluate the
+collaborative environments and maintain the collaboration respectively.
 
 This work is implemented as part of a larger effort to build robots capable of
 generating and recognizing emotions in order to be better collaborators. In this
-paper, we report on the specific problem of appraising the relevance and
-controllability of events within a collaborative interaction. Our contribution
-is to ground general appraisal concepts in the specific context and structure of
-collaboration. This work is part of the development of \textit{Affective
-Motivational Collaboration Theory} which is built on the foundations of the
-\textit{SharedPlans} theory of collaboration \cite{grosz:plans-discourse} and
-the \textit{cognitive appraisal} theory of emotions
+paper, we report on the specific problem of appraising the expectedness of
+events within a collaborative interaction. Our contribution is to ground general
+appraisal concepts in the specific context and structure of collaboration. This
+work is part of the development of \textit{Affective Motivational Collaboration
+Theory} \cite{shayganfar:theory-overview} which is built on the foundations of
+the \textit{SharedPlans} theory of collaboration \cite{grosz:plans-discourse}
+and the \textit{cognitive appraisal} theory of emotions
 \cite{gratch:domain-independent}.
 
 There are several appraisal models (e.g., EMA \cite{marsella:ema-process-model})
@@ -188,14 +187,25 @@ and robotics. However, none of these models have focused on the appraisal
 processes during collaboration. We believe appraisal plays a key role in
 collaboration due to its regulatory and evaluative nature. Also, collaboration
 induces some changes to underlying appraisal processes due to its unique nature.
-For instance, although the appraisal models mostly use utility to compute the
-relevance of an event, we have found new cognitive components involved in
-determining utility because of the influence of the collaboration. These
-components, such as the recurrence of a belief by the human collaborator or the
-influence of the human collaborator's perceived emotion on the robot's decisions
-emphasize the fact that collaboration requires different procedures in appraisal
-processes. In this paper, we provide the relevance and controllability
-appraisals of an event in the collaboration context.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.4\textwidth]{figure/actionselection-croped.pdf}
+  \vspace*{-3mm}
+  \caption{{\fontsize{8}{9}\selectfont Influence of Collaboration on Appraisal
+  (mechanisms in our framework).}}
+  \label{fig:cpm}
+  \vspace*{-6mm}
+\end{figure}
+
+The computational collaboration model in our work is strongly influenced by the
+SharedPlans theory \cite{grosz:plans-discourse}. However, our algorithms are
+also compatible with other collaboration theories, e.g., Joint Intentions theory
+\cite{cohen:teamwork}. These theories have been extensively used to examine and
+describe teamwork and collaboration. Yet, collaboration and emotion theories
+have never been combined, as they are in our work. We believe a systematic
+integration of collaboration theories and appraisal theory can help explain the
+underlying processes of collaboration structure.
 
 \begin{figure*}
   \centering
@@ -205,40 +215,55 @@ appraisals of an event in the collaboration context.
   \caption{Example of collaboration structure (also used as task model for
   the evaluation).}
   \label{fig:taskModel}
-  \vspace*{-5mm}
+  \vspace*{-3mm}
 \end{figure*}
-
-Our work builds on the general notions of appraisal theory
-\cite{gratch:domain-independent,marsella:computational,scherer:sequential-appraisal-process,scherer:appraisal-processes},
-but is focused on its application in human-robot collaboration. Computational
-appraisal models have been applied to a variety of uses in psychology, robotics,
-AI, and cognitive science. For instance, in \cite{marsella:ema-process-model}
-EMA is used to generate specific predictions about how human subjects will
-appraise and cope with emotional situations. Furthermore, appraisal theory has
-been used in robots' decision making \cite{castro:autonomous-robot-fear}, or in
-their cognitive systems
-\cite{hudlicka:emotinos-reasons,marinier:emotion-reinforcement}. In the virtual
-agents community, empathy and affective decision-making is a research topic that
-has received much attention in the last two decades
-\cite{scott:modeling-empathy-agent,paiva:agent-care,pontier:women-robot-men,velasquez:emotions-motivations-agents}.
-However, EMA and other work in artificial intelligence and robotics which apply
-appraisal theory do not focus on the dynamics of collaborative contexts
-\cite{adam:bdi-emotional-companion,kim:model-hri-appraisal,marsella:ema-process-model,rosenbloom:sigma-appraisal}.
-
-The computational collaboration model in our work is strongly influenced by the
-SharedPlans theory \cite{grosz:plans-discourse}. However, our algorithms are
-also compatible with other collaboration theories, e.g., Joint Intentions theory
-\cite{cohen:teamwork}, or STEAM \cite{tambe:flexible-teamwork}. These theories
-have been extensively used to examine and describe teamwork and collaboration.
-Yet, collaboration and emotion theories have never been combined, as they are in
-our work. We believe a systematic integration of collaboration theories and
-appraisal theory can help explain the underlying processes of collaboration
-structure.
 
 %Note that either {\textbf{.ps}} or {\textbf{.eps}} formats are
 %used; use
 %the \texttt{{\char'134}epsfig} or \texttt{{\char'134}psfig}
 %commands as appropriate for the different file types.
+
+\section{Collaboraiton}
+
+The Collaboration mechanism constructs a hierarchy of goals associated with
+tasks in a hierarchical task network (see Figure \ref{fig:taskModel}), and also
+maintains the constraints and other required details of the collaboration
+including the inputs and outputs of individual tasks, the \textit{preconditions}
+(specifying whether it is appropriate to perform a task), and the
+\textit{postconditions} (specifying whether a just-completed task was
+successful). Collaboration also monitors the focus of attention, which
+determines the salient objects, properties and relations at each point, and
+shifts the focus of attention during the interaction.
+
+\begin{itemize}[leftmargin=2pt]
+  \setlength\itemsep{0.02mm}
+  \item \textit{recognizeGoal($\varepsilon_t$)} returns the unique goal to which
+  the given event (action, utterance, or emotional expression) directly
+  contributes; it is only one goal since the robot can only do one primitive
+  action at a time in our collaboration model, i.e, in the goal tree, a given
+  primitive action can only directly contribute to one parent goal. The method
+  returns \textit{ambiguous} if it does not recognize a goal in the
+  plan\footnote{Ambiguity introduces some extra complexities which are beyond
+  scope of this paper.}.
+  
+  \item \textit{getTopLevelGoal($g_t$)} returns $g_t$'s top level goal.
+  
+  \item \textit{isLive($g_t$)} returns \textit{true} if all the predecessors of
+  $g_t$ are \textsc{achieved} and all the preconditions are \textsc{satisfied},
+  i.e., \textsc{pending} or \textsc{in progress} goals; otherwise returns \textit{false}.
+  
+  \item \textit{isFocusShift($g_t$)} returns \textit{true} if the given
+  goal is not the previous focus (top of the stack); otherwise returns
+  \textit{false}.
+  
+  \item \textit{isNecessaryFocusShift($g_t$)} returns \textit{true} if the
+  status of the previous focus was \textsc{achieved}; otherwise returns
+  \textit{false} \cite{rich:focused-unfocused-users}.
+  
+  \item \textit{isPath($g_1$, $g_2$)} returns \textit{true} if there is a path
+  between $g_1$ and $g_2$ in a plan tree structure; otherwise returns
+  \textit{false}.
+\end{itemize}
 
 \section{Expectedness in Collaboraiton}
 
