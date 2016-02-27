@@ -1,10 +1,5 @@
 \begin{thebibliography}{1}
 
-\bibitem{cohen:teamwork}
-P.~Cohen and H.~J. Levesque.
-\newblock {\em Teamwork}.
-\newblock SRI International, 1991.
-
 \bibitem{gratch:domain-independent}
 J.~Gratch and S.~C. Marsella.
 \newblock A domain-independent framework for modeling emotion.
@@ -23,11 +18,6 @@ N.~Lesh, C.~Rich, and C.~L. Sidner.
 \newblock In M.~Bauer, P.~J. Gmytrasiewicz, and J.~Vassileva, editors, {\em
   User Modeling 2001}, volume 2109, pages 64--73. Springer Berlin Heidelberg,
   2001.
-
-\bibitem{marsella:ema-process-model}
-S.~C. Marsella and J.~Gratch.
-\newblock {EMA}: A process model of appraisal dynamics.
-\newblock {\em Cognitive Systems Research}, 10(1):70--90, March 2009.
 
 \bibitem{shayganfar:theory-overview}
 M.~Shayganfar, C.~Rich, and C.~L. Sidner.

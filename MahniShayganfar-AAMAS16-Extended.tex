@@ -112,10 +112,9 @@ processes in a cognitive theory to support interaction between humans and robots
 or virtual agents. We build primarily on the \textit{cognitive appraisal} theory of
 emotions and the \textit{SharedPlans} theory of collaboration to investigate the
 structure, fundamental processes and functions of emotions in a collaboration.
-We have developed new algorithms for appraisal processes as part of a new
-overall computational model. In this paper, we provide the \textit{expectedness}
-appraisal algorithm for collaboration context. We have evaluated our implemented
-algorithm by conducting an online user study.
+We have developed the \textit{expectedness} appraisal algorithm as part of a new
+overall computational model. We have evaluated our implemented algorithm by
+conducting an online user study.
 \end{abstract}
 
 % \begin{CCSXML}
@@ -173,39 +172,29 @@ collaborative environments and maintain the collaboration respectively.
 This work is implemented as part of a larger effort to build robots capable of
 generating and recognizing emotions in order to be better collaborators. In this
 paper, we report on the specific problem of appraising the expectedness of
-events within a collaborative interaction. Our contribution is to ground general
-appraisal concepts in the specific context and structure of collaboration. This
+events within a collaboration (see Figure \ref{fig:cpm}). Our contribution is to
+ground general appraisal concepts in the specific context of collaboration. This
 work is part of the development of \textit{Affective Motivational Collaboration
 Theory} \cite{shayganfar:theory-overview} which is built on the foundations of
 the \textit{SharedPlans} theory of collaboration \cite{grosz:plans-discourse}
 and the \textit{cognitive appraisal} theory of emotions
-\cite{gratch:domain-independent}.
-
-There are several appraisal models (e.g., EMA \cite{marsella:ema-process-model})
-contributing in different applications such as social sciences, virtual agents,
-and robotics. However, none of these models have focused on the appraisal
-processes during collaboration. We believe appraisal plays a key role in
+\cite{gratch:domain-independent}. We believe appraisal plays a key role in
 collaboration due to its regulatory and evaluative nature. Also, collaboration
 induces some changes to underlying appraisal processes due to its unique nature.
+Yet, collaboration and emotion theories have never been combined, as they are in
+our work. Therefore, a systematic integration of collaboration theories and
+appraisal theory can help explain the underlying processes of collaboration
+structure.
 
 \begin{figure}[t]
   \centering
-  \includegraphics[width=0.4\textwidth]{figure/actionselection-croped.pdf}
+  \includegraphics[width=0.35\textwidth]{figure/actionselection-croped.pdf}
   \vspace*{-3mm}
   \caption{{\fontsize{8}{9}\selectfont Influence of Collaboration on Appraisal
   (mechanisms in our framework).}}
   \label{fig:cpm}
-  \vspace*{-6mm}
+  \vspace*{-5mm}
 \end{figure}
-
-The computational collaboration model in our work is strongly influenced by the
-SharedPlans theory \cite{grosz:plans-discourse}. However, our algorithms are
-also compatible with other collaboration theories, e.g., Joint Intentions theory
-\cite{cohen:teamwork}. These theories have been extensively used to examine and
-describe teamwork and collaboration. Yet, collaboration and emotion theories
-have never been combined, as they are in our work. We believe a systematic
-integration of collaboration theories and appraisal theory can help explain the
-underlying processes of collaboration structure.
 
 \begin{figure*}
   \centering
@@ -215,7 +204,7 @@ underlying processes of collaboration structure.
   \caption{Example of collaboration structure (also used as task model for
   the evaluation).}
   \label{fig:taskModel}
-  \vspace*{-3mm}
+  \vspace*{-5mm}
 \end{figure*}
 
 %Note that either {\textbf{.ps}} or {\textbf{.eps}} formats are
@@ -226,17 +215,16 @@ underlying processes of collaboration structure.
 \section{Collaboraiton}
 
 The Collaboration mechanism constructs a hierarchy of goals associated with
-tasks in a hierarchical task network (see Figure \ref{fig:taskModel}), and also
+tasks in a hierarchical task network (see Figure \ref{fig:taskModel}), and
 maintains the constraints and other required details of the collaboration
-including the inputs and outputs of individual tasks, the preconditions
-(specifying whether it is appropriate to perform a task), and the postconditions
-(specifying whether a just-completed task was successful). Collaboration also
-monitors the focus of attention, which determines the salient objects,
-properties and relations at each point, and shifts the focus of attention during
-the interaction.
+including the inputs and outputs of individual tasks, the preconditions, and the
+postconditions. Collaboration also monitors the focus of attention, which
+determines the salient objects at each point, and shifts the focus of attention
+during the interaction.
 
+\vspace*{-3mm}
 \begin{itemize}[leftmargin=2pt]
-  \setlength\itemsep{0.02mm}
+  \setlength\itemsep{0.01mm}
   \item \textit{recognizeGoal($\varepsilon_t$)} returns the unique goal to which
   the given event (action, utterance, or emotional expression) directly
   contributes; it is only one goal since the robot can only do one primitive
@@ -265,31 +253,29 @@ the interaction.
   \textit{false}.
 \end{itemize}
 
+\vspace*{-6mm}
 \section{Expectedness in Collaboraiton}
 
 Expectedness is the extent to which the truth value of a state could have been
-predicted from causal interpretation of an event
-\cite{marsella:ema-process-model}. In the collaboration context the expectedness
-of an event evaluates the congruency of the event with respect to the existing
-knowledge about the shared goal. Thus, expectedness underlies a collaborative
-robot's attention. Congruent beliefs in a robot's mental state will lead to more
-consistent and effective outcomes of the processes in the overall architecture.
-The collaboration mechanism uses expectedness to maintain the robot's attention
-and subsequently its mental state with respect to the shared goal. Reciprocally,
-the appraisal mechanism uses the underlying information of the collaboration
-structure to evaluate the expectedness of an event. Therefore, a collaborative
-robot uses expectedness to maintain its own mental state towards the shared
-goal. The robot will also be able to respond to unexpected but relevant events.
+predicted from causal interpretation of an event. In the collaboration context
+the expectedness of an event evaluates the congruency of the event with respect
+to the existing knowledge about the shared goal. Thus, expectedness underlies a
+collaborative robot's attention. Congruent beliefs in a robot's mental state
+will lead to more consistent and effective outcomes of the processes in the
+overall architecture. The collaboration mechanism uses expectedness to maintain
+the robot's attention and subsequently its mental state with respect to the
+shared goal. Reciprocally, the appraisal mechanism uses the underlying
+information of the collaboration structure to evaluate the expectedness of an
+event.
 
+\vspace*{-2mm}
 \begin{algorithm}
 	\caption{(Expectedness)}
 	\label{alg:expectedness}
 	\begin{algorithmic}[1]
 		\Function{IsEventExpected}{Event $\varepsilon_t$}
-			\Statex
 			\State $\mathit{g}_{t} \gets \textit{recognizeGoal}{(\varepsilon_t)}$
 			\State $\mathit{g}_{top} \gets \textit{getTopLevelGoal}{(\mathit{g}_{t})}$
-			\Statex
 			\If {$(\textit{isLive}{(\mathit{g}_{t})})$}
 				\If {$(\neg \textit{isFocusShift}{(\mathit{g}_{t})}\hspace*{2mm}\OR$ \\
 				\hspace*{13mm}$\textit{isNeccessaryFocusShift}{(\mathit{g}_{t})})$}
@@ -308,6 +294,7 @@ goal. The robot will also be able to respond to unexpected but relevant events.
 	\end{algorithmic}
 \end{algorithm}
 
+\vspace*{-3mm}
 In Algorithm \ref{alg:expectedness} we provide the process of computing the
 expectedness based on the shared plan and status of the shared goal. The key
 point in this algorithm is the status of the current shared goal
@@ -329,6 +316,7 @@ now; if the goal is at least in the plan, i.e., on the path to the top level
 goal, it is just \textsc{unexpected} while any others are
 \textsc{most-unexpected}.
 
+\vspace*{-3mm}
 \section{Evaluation}
 
 We conducted a user study to test our hypothesis that humans and our
@@ -367,7 +355,7 @@ our algorithms was the task model depicted in Figure \ref{fig:taskModel}.
   \vspace*{-7mm}
   \caption{{\fontsize{9}{9}\selectfont Example Expectedness Question.}}
   \label{fig:qs1}
-  \vspace{-2mm}
+  \vspace{-3mm}
 \end{figure}
 
 Average results and standard deviation of the fractions of subjects' answers
