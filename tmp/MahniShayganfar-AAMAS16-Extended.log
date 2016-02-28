@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.24)  27 FEB 2016 19:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.11.24)  27 FEB 2016 23:59
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -816,24 +816,24 @@ File: figure/actionselection-croped.pdf Graphic file (type pdf)
 
 <use figure/actionselection-croped.pdf>
 Package pdftex.def Info: figure/actionselection-croped.pdf used on input line 1
-93.
+90.
 (pdftex.def)             Requested size: 176.40308pt x 68.80202pt.
 
 <figure/taskModel-croped.pdf, id=5, 556.0775pt x 221.82875pt>
 File: figure/taskModel-croped.pdf Graphic file (type pdf)
 
 <use figure/taskModel-croped.pdf>
-Package pdftex.def Info: figure/taskModel-croped.pdf used on input line 204.
+Package pdftex.def Info: figure/taskModel-croped.pdf used on input line 201.
 (pdftex.def)             Requested size: 406.88353pt x 142.26099pt.
 
-Overfull \hbox (12.59216pt too wide) in paragraph at lines 238--241
+Overfull \hbox (12.59216pt too wide) in paragraph at lines 235--238
 [][]\T1/aer/m/it/9 isLive($\OML/cmm/m/it/9 g[]$\T1/aer/m/it/9 ) \T1/aer/m/n/9 r
 e-turns \T1/aer/m/it/9 true \T1/aer/m/n/9 if all the pre-de-ces-sors of $\OML/c
 mm/m/it/9 g[]$ \T1/aer/m/n/9 are \T1/aer/m/sc/9 achieved
  []
 
 
-Overfull \hbox (1.1126pt too wide) in paragraph at lines 256--256
+Overfull \hbox (1.1126pt too wide) in paragraph at lines 253--253
 []\secfnt EXPECTEDNESS IN COL-LAB-O-RA-TION 
  []
 
@@ -841,19 +841,19 @@ Overfull \hbox (1.1126pt too wide) in paragraph at lines 256--256
 
 
  <./figure/actionselection-croped.pdf>]
-Overfull \hbox (1.2474pt too wide) in paragraph at lines 325--335
+Overfull \hbox (1.2474pt too wide) in paragraph at lines 322--332
 \T1/aer/m/n/9 test sub-jects, we used a sim-ple ex-am-ple of prepar-ing a peanu
 t
  []
 
 
-Overfull \hbox (3.00409pt too wide) in paragraph at lines 325--335
+Overfull \hbox (3.00409pt too wide) in paragraph at lines 322--332
 \T1/aer/m/n/9 tion-naire; Fig-ure 2[] shows the cor-re-spond-ing task model whi
 ch
  []
 
 
-Overfull \hbox (3.52412pt too wide) in paragraph at lines 362--369
+Overfull \hbox (3.52412pt too wide) in paragraph at lines 346--353
 [][]\T1/aer/m/n/9 According to the col-lab-o-ra-tion the-o-ries (e.g., Shared-P
 lans),
  []
@@ -884,7 +884,7 @@ ts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on MahniShayganfar-AAMAS16-Extended.pdf (2 pages, 229637 bytes).
+Output written on MahniShayganfar-AAMAS16-Extended.pdf (2 pages, 232164 bytes).
 
 PDF statistics:
  115 PDF objects out of 1000 (max. 8388607)
